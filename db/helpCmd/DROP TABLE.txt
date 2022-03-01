@@ -1,0 +1,8 @@
+'DROP TABLE' command is used to drop the table from the database.
+Format for the command is geven below:
+
+DROP TABLE tablename;
+
+Here 'tablename' is the name of the table you want to delete from the database.
+You must ensure that the given table is present in database otherwise it will throw
+error that the table does not exist.

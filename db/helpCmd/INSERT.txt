@@ -1,0 +1,7 @@
+'INSERT' command is used to insert records into the table.
+Format for the command is given below:
+
+INSERT INTO tablename ( value1 , value2 , value3 , value4 );
+
+The values must be given in the sequence as per the schema.
+The data types must also match otherwise it will throw the related error. 

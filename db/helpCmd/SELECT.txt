@@ -1,0 +1,20 @@
+'SELECT' command is used to read the values from the table.
+Different formats for using the command are given below : 
+
+1. Basic format :
+SELECT * FROM tablename ;
+'*' represents all the attributes. And this command is going to select all the reocrds 
+with all the attributes from the table 'tablename' .
+
+2. Format for selecting the limited attributes : 
+SELECT attributeName1,attributeName2,attributeName3 FROM tablename ;
+This command will only select the given attributes for all the records from the table 'tablaname' .
+
+3. Format for using conditions :
+SELECT attributeName1,attributeName2 FROM tablename WHERE attributeName1 = 'A' AND attributeName2 >= 10 OR attributeName1 = attributeName4 ; 
+This command will select the given attributes from the table 'tablename' where the 
+records satisfy the given conditions. You can give as many conditions as you wish.
+You can also use '*' inplace of the attribute names.
+
+The supported logical operators are : AND , OR
+The supported relational operators are : = , != , > , < , <= , >= 

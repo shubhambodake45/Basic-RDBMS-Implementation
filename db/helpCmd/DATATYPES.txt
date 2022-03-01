@@ -1,0 +1,14 @@
+The supported data types are:
+
+1. CHAR(x) 
+     Here x is integer and it represents the maximum lenght of the string you are 
+allowed to assign to the given attribute.
+
+2. STR 
+    This data type allows you to assign string of any lenght to the given attribute.
+
+3. INT 
+    This data type allows you to assign integer values to the given attribute.
+
+3. DECIMAL
+    This data type allows you to assign decimal values to the given attribute.

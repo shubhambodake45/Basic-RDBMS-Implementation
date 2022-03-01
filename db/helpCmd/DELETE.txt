@@ -1,0 +1,13 @@
+'DELETE' command allows you to delete the tuples from the table which satisfies the
+given condition.
+Format for the command is given below :
+
+DELETE FROM tablename WHERE attributeName1 = value1 AND attributeName2 > value2 OR attributeName3 = value3 ;
+
+Here, 'tablename' is the name of the table from which you want to delete the records.
+'attributeName1','attributeName2','attributeName3' are the attributes of the table and
+'value1','value2','value3' are the values for the checking the conditions.
+'AND' and 'OR' are the logical operators.
+
+The supported logical operators are : AND , OR
+The supported relational operators are : = , != , > , < , <= , >= 

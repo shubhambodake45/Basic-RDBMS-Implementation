@@ -1,0 +1,6 @@
+ROLLNO < 50 AND ROLLNO > 25
+STUD_NAME != 'abc' AND STUD_NAME != 'xyz'
+-
+-
+PK: ROLLNO#GRADE
+FK: DEPTNO DeptInfo ID

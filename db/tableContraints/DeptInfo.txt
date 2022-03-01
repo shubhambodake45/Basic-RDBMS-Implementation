@@ -1,0 +1,5 @@
+ID >= 10
+-
+PK: ID
+RT: ID EmployeeInfo DEPTNO
+RT: ID EmployeeInfo DEPTNO

@@ -1,0 +1,73 @@
+CREATE TABLE EmployeeInfo ( ROLLNO INT CHECK ( ROLLNO < 50 AND ROLLNO > 25 ) , STUD_NAME CHAR(10) CHECK ( STUD_NAME != 'abc' AND STUD_NAME != 'xyz' ) , DEPTNO INT , GRADE CHAR(1) , PRIMARY KEY (ROLLNO,GRADE) , FOREIGN KEY (DEPTNO) REFERENCES DeptInfo (ID) );
+
+INSERT INTO EmployeeInfo VALUES ( 45 , 'Shubham' , 10 , 'A' );
+INSERT INTO EmployeeInfo VALUES ( 34 , 'Deven' , 20 , 'B' );
+INSERT INTO EmployeeInfo VALUES ( 35 , 'Ranjana' , 10 , 'A' );
+INSERT INTO EmployeeInfo VALUES ( 44 , 'Aniruddha' , 30 ,  'C' );
+INSERT INTO EmployeeInfo VALUES ( 33 , 'Siddhesh' , 40 , 'A' );
+INSERT INTO EmployeeInfo VALUES ( 26 , 'Pratik' , 10 , 'A' );
+
+INSERT INTO EmployeeInfo VALUES ( 1 , 'Kshitij' , 10 , 'A' );
+INSERT INTO EmployeeInfo VALUES ( 30 , 'AAAAAAAAAAA' , 30 , 'B' );
+INSERT INTO EmployeeInfo VALUES ( 30 , 'xyz' , 30 , 'B' );
+INSERT INTO EmployeeInfo VALUES ( '41' , 'Anuj' , 40 , 'B' );
+INSERT INTO EmployeeInfo VALUES ( 26 , 'Anuj' , 40 , 'A' );
+
+SELECT * FROM EmployeeInfo ;
+SELECT * FROM EmployeeInfo WHERE ROLLNO > 40 ;
+SELECT * FROM EmployeeInfo WHERE GRADE = 'A' ;
+SELECT ROLLNO,DEPTNO,GRADE FROM EmployeeInfo WHERE DEPTNO = 10 AND GRADE = 'A' ;
+SELECT STUD_NAME,DEPTNO,GRADE FROM EmployeeInfo WHERE DEPTNO = 10 OR GRADE = 'A' ;
+
+DESCRIBE TABLE EmployeeInfo ;
+
+UPDATE EmployeeInfo SET DEPTNO = 80 , STUD_NAME = 'AAA' WHERE ROLLNO = 44 ;
+UPDATE EmployeeInfo SET DEPTNO = 60 , STUD_NAME = 'AAA' WHERE ROLLNO = 44 ;
+UPDATE EmployeeInfo SET DEPTNO = 60 , STUD_NAME = 123 WHERE ROLLNO = 44 ;
+
+DELETE FROM EmployeeInfo WHERE DEPTNO = 10 ;
+
+DROP TABLE EmployeeInfo ;
+---------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE DeptInfo ( ID INT CHECK ( ID >= 10 ) , DEPT_NAME CHAR(5) , PRIMARY KEY (ID) );
+
+INSERT INTO DeptInfo VALUES ( 10 , 'CSE' );
+INSERT INTO DeptInfo VALUES ( 20 , 'IT' );
+INSERT INTO DeptInfo VALUES ( 30 , 'ENTC' );
+INSERT INTO DeptInfo VALUES ( 30 , 'MECH' );
+INSERT INTO DeptInfo VALUES ( 40 , 'MECH' );
+INSERT INTO DeptInfo VALUES ( 50 , 'CIVIL' );
+
+SELECT * FROM DeptInfo ;
+
+DESCRIBE TABLE DeptInfo ;
+
+UPDATE DeptInfo SET ID = 70 WHERE DEPT_NAME = 'ENTC' ;
+UPDATE DeptInfo SET ID = 60 WHERE DEPT_NAME = 'CIVIL' ;
+
+DELETE FROM DeptInfo WHERE ID = 10 ;
+
+DROP TABLE DeptInfo ;
+----------------------------------------------------------------------------------------------------------------
+
+HELP TABLES ;
+
+HELP CREATE TABLE ;
+HELP DROP TABLE ;
+HELP SELECT ;
+HELP INSERT ;
+HELP DELETE ;
+HELP UPDATE ;
+HELP DATATYPES ;
+
+QUIT ;
+----------------------------------------------------------------------------------------------------------------
+
+SELECT * FROM EmployeeInfo JOIN DeptInfo ;
+SELECT * FROM EmployeeInfo JOIN DeptInfo WHERE DEPTNO = ID ;
+SELECT * FROM EmployeeInfo JOIN DeptInfo WHERE DEPTNO = ID AND GRADE = 'A' ;
+SELECT STUD_NAME,DEPT_NAME,DEPTNO FROM EmployeeInfo JOIN DeptInfo ;
+SELECT STUD_NAME,DEPTNO,DEPT_NAME FROM EmployeeInfo JOIN DeptInfo WHERE DEPTNO = ID ;
+----------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,14 @@
+'UPDATE' command is use to update the values of the specific records from the 
+table which satisfies the given conditions.
+
+Format for using the command is given below :
+
+UPDATE FROM tablename SET attributeName1 = value1 , attributeName2 = value2 WHERE attributeName3 = value3 OR attributeName4 = value4 ;
+
+'tablename' is the name of the table you want to update and after 'SET' you can
+give the values for the attributes you want to update. And all the records satisfying
+given conditions will be updated with the given values.
+The given values must match the data type or else the command will throw error.
+
+The supported logical operators are : AND , OR
+The supported relational operators are : = , != , > , < , <= , >=  

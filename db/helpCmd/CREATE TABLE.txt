@@ -1,0 +1,18 @@
+'CREATE TABLE' command is used to create a new table in the database.
+Format for using the command is given below:
+
+1. Basic format:
+CREATE TABLE tablename ( attributeName1 AttributeType1 , attributeName2 AttributeType2 , attributeName3 AttributeType3 );
+Here, 'tablename' is the name you want to give to your table. Make sure the table with given
+name does not already exist if it does it will throw the error.
+'attributeName1','attributeName2','attributeName3' are the names of the attributes and 
+'AttributeType1','AttributeType2','AttributeType3' are the data types of the attributes.
+To see the supported dataTypes type given command into the terminal 'HELP DATATYPES'.
+
+2. Format for using the CHECK constraint : 
+CREATE TABLE tablename ( attributeName1 CHAR(2) , attributeName2 INT CHECK ( attributeName2 > 10 AND attribute 2 < 30 ) , attributeName3 CHAR(20) CHECK ( attributeName3 != 'shubham' ) );
+
+3. FORMAR for adding the Primay Key and Foreign Key :
+CREATE TABLE tablename ( attributeName1 CHAR(2) , attributeName2 INT , attributeName3 CHAR(20) , PRIMARY KEY (attributeName2) , FOREIGN KEY (attributeName1) REFERENCES tablename2 (attributeName5) );
+To create the composite primary key use the given format:
+PRIMARY KEY (attributeName2,attribute3)
